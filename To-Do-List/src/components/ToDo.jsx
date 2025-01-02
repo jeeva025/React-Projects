@@ -45,7 +45,7 @@ function ToDo() {
 
   return (
     <>
-      <div className="w-[30-rem">
+      <div className="w-[30-rem]">
         <h1
           className="text-lg my-2 font-medium
             text-amber-500"
