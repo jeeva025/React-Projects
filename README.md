@@ -2,7 +2,6 @@
 
 A feature-rich, interactive Kanban board designed to track and manage job applications throughout the hiring pipeline. This project demonstrates complex state management, seamless drag-and-drop interactions, and local data persistence.
 
-**Live Demo:** [Insert your Vercel URL here, e.g., https://jeeva-app-tracker.vercel.app]
 
 ## ✨ Key Features
 
