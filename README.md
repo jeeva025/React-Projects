@@ -1,16 +1,28 @@
-# React + Vite
+# 🚀 Job Application Tracker (Kanban Board)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A feature-rich, interactive Kanban board designed to track and manage job applications throughout the hiring pipeline. This project demonstrates complex state management, seamless drag-and-drop interactions, and local data persistence.
 
-Currently, two official plugins are available:
+**Live Demo:** [Insert your Vercel URL here, e.g., https://jeeva-app-tracker.vercel.app]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## React Compiler
+* **Drag-and-Drop Interface:** Smoothly move job applications between stages (Wishlist, Applied, Interviewing, Offered, Rejected) using `@hello-pangea/dnd`.
+* **Complex State Management:** Utilizes **Redux Toolkit** with normalized state architecture to efficiently handle cross-column card movements and CRUD operations.
+* **Data Persistence:** Integrates with the browser's `localStorage` to automatically save and load board state, ensuring no data is lost upon page refresh.
+* **Smart Search & Filter:** Features a non-destructive search bar that dims non-matching cards instead of removing them from the DOM, preserving the drag-and-drop index integrity.
+* **Full CRUD Operations:** Add new job applications via a custom modal and delete outdated cards directly from the board.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+* **Frontend Framework:** React.js (via Vite for optimized build speeds)
+* **State Management:** Redux Toolkit (`@reduxjs/toolkit`, `react-redux`)
+* **Drag & Drop:** `@hello-pangea/dnd` (Modern, maintained fork of `react-beautiful-dnd`)
+* **Styling:** Tailwind CSS (Responsive, utility-first styling)
+* **Deployment:** Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+🚀 Local Installation & SetupTo run this project locally on your machine:Clone the repository:Bashgit clone [https://github.com/YOUR_USERNAME/job-application-tracker.git](https://github.com/YOUR_USERNAME/job-application-tracker.git)
+Navigate into the directory:Bashcd job-application-tracker
+Install the dependencies:Bashnpm install
+Start the development server:Bashnpm run dev
+Open your browser and visit http://localhost:5173.💡 Technical HighlightsBuilding this Kanban board involved solving several interesting frontend challenges:Redux Normalization: Instead of deeply nested arrays, the state is normalized (separating the jobs object from the columns arrays). This allows for $O(1)$ lookups when updating a job's status and prevents unnecessary re-renders.Immutable State Updates: Leveraged Immer (built into Redux Toolkit) to safely splice arrays when moving cards within the same column or between different columns.
